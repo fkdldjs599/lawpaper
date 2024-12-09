@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - SHIN HYERIM</title>
+
+    <link rel="icon" href="../img/favicon.ico">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    <meta content="LawPaper" property='og:title' />
+    <meta content="" property='og:url' />
+    <meta content="나홀로 소송은 로페이퍼" property='og:description' />
+    <meta content="" property='og:image' />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+
+    <header class="header"> <!--헤더 없을때 addclass none-->
+        <div class="nav_bg"></div>
+
+        <div class="head_con">
+            <div class="rel">
+                <button type="button" class="close_btn">
+                    <img src="../img/close_btn2.png" alt="닫기">
+                </button>
+                <div class="inner1120">
+                    <h1 class="h_left vt_mid">
+                        <a href="index.html" class="logo">
+                            <img src="../img/logo.png" alt="나홀로 소송은 로페이퍼">
+                        </a>
+                    </h1>
+                    <nav class="h_cen vt_mid">
+                        <a href="index.html" class="nav_a">홈</a>
+                        <a href="#" class="nav_a head2">서면작성 의뢰</a>
+                        <a href="chat.html" class="nav_a new">받은 견적서</a>
+                        <!-- 
+                            메뉴이름
+                            의뢰인일때 = "받은 견적서"
+                            변호사일때 = "보낸 견적서"
+                         -->
+        
+                        <a href="cs.html" class="nav_a">고객센터</a>
+                    </nav>
+    
+                    <div class="h_right vt_mid">
+                        <!-- <button type="button" class="hd_j vt_mid">5초 회원가입</button> -->
+                        <button type="button" class="hd_l vt_mid">로그인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="head_m">
+            <div class="mh_left vt_mid">
+                <!-- <button type="button" class="back_btn" onclick="history.go(-1);">
+                    <img src="../img/back_btn.png" alt="뒤로가기">
+                </button> -->
+            </div>
+            <h1 class="mh_cen vt_mid">
+                <a href="index.html" class="logo">
+                    <img src="../img/logo.png" alt="나홀로 소송은 로페이퍼">
+                </a>
+            </h1>
+            <div class="mh_right vt_mid">
+                <button type="button" class="alarm">
+                    <img src="../img/alarm_btn.png" alt="알림">
+
+                    <span class="num vt_mid">99</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section id="main" class="page">
+        <div class="inner1120">
+            <article class="m_title">
+                <h1 class="m_h1">나홀로소송은 로페이퍼와 함께</h2>
+                <div class="m_sub">변호사가 작성한 서류로 나홀로소송을 준비해보세요!</div>
+            </article>
+    
+            <section class="contents">
+                <article class="gray_box">
+                    <div class="gb_left mySwiper vt_mid">
+                        <div class="ban_wrap swiper-wrapper">
+                            <!--
+                                배너
+                                1번째만 링크이동
+                                2,3번째는 이미지만 넣음
+                            -->
+                            <a href="ban_page.html" class="ban_a swiper-slide">
+                                <div class="grid">
+                                    <img src="../img/banner_v2.png" alt="나홀로소송 도와줘! 친절한 변호사님이 직접 알려줘요">
+                                </div>
+                            </a>
+                            <div class="ban_a swiper-slide">
+                                <div class="grid">
+                                    <img src="../img/banner_v2.png" alt="나홀로소송 도와줘! 친절한 변호사님이 직접 알려줘요">
+                                </div>
+                            </div>
+                            <div class="ban_a swiper-slide">
+                                <div class="grid">
+                                    <img src="../img/banner_v2.png" alt="나홀로소송 도와줘! 친절한 변호사님이 직접 알려줘요">
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="ban_btns">
+                            <button type="button" class="prev_btn">
+                                <img src="../img/prev_btn.png">
+                            </button>
+    
+                            <div class="swiper-pagination"></div>
+    
+                            <button type="button" class="next_btn">
+                                <img src="../img/next_btn.png">
+                            </button>
+    
+                            <button type="button" class="stop_btn on">
+                                <img src="../img/stop_btn.png" class="stop">
+                                <img src="../img/play_btn.png" class="play">
+                            </button>
+                        </div>
+                    </div>
+                    <script>
+                        const bannerSlide = new Swiper(".mySwiper", {
+                            slidesPerView: 1,
+                            slidesPerGroup: 1,
+                            loop: true,
+                            autoplay: {
+                                delay: 4000,
+                            },
+                            pagination: {
+                                el: ".swiper-pagination",
+                                type: "fraction",
+                            },
+                            navigation:{
+                                nextEl:".next_btn",
+                                prevEl:".prev_btn",
+                            },
+                        });
+                    </script>
+                    <div class="gb_right mySwiper2 vt_mid">
+                        <div class="rev_wrap swiper-wrapper">
+                            <button type="button" class="rev_a vt_mid swiper-slide">
+                                <span class="txt vt_mid">리뷰 제목입니다 리뷰 제목입니다 리뷰 제목입니다 리뷰제목입니다</span>
+                            </button>
+                            <button type="button" class="rev_a vt_mid swiper-slide">
+                                <span class="txt vt_mid">리뷰 제목입니다 리뷰 제목입니다 리뷰 제목입니다 리뷰제목입니다</span>
+                            </button>
+                            <button type="button" class="rev_a vt_mid swiper-slide">
+                                <span class="txt vt_mid">리뷰 제목입니다 리뷰 제목입니다 리뷰 제목입니다 리뷰제목입니다</span>
+                            </button>
+                            <button type="button" class="rev_a vt_mid swiper-slide">
+                                <span class="txt vt_mid">리뷰 제목입니다 리뷰 제목입니다 리뷰 제목입니다 리뷰제목입니다</span>
+                            </button>
+                            <button type="button" class="rev_a vt_mid swiper-slide">
+                                <span class="txt vt_mid">리뷰 제목입니다 리뷰 제목입니다 리뷰 제목입니다 리뷰제목입니다</span>
+                            </button>
+                        </div>
+                    </div>
+                    <script>
+                        var swiper2 = new Swiper(".mySwiper2", {
+                            direction: 'vertical',
+                            slidesPerView: 3,
+                            slidesPerGroup: 1,
+                            spaceBetween : 10,
+                            loop: true,
+                            autoplay: {
+                            delay: 4000,
+                            },
+                            touchRatio: 0,
+                        });
+                    </script>
+                </article>
+    
+                <article class="doc_wrap">
+                    <h2 class="m_h2">의뢰할 서류 유형을 선택해주세요.<br><br>최대 5명의 변호사로부터 견적서를 받아 볼 수 있습니다.</h2>
+    
+                    <div class="box_list">
+                        <a href="m_box1.html" class="box">
+                            <h3 class="m_h3">형사 고소</h3>
+                            <div class="pr">
+                                <div class="mb9">기본 330,000원~</div>
+                                <div class="mb9">고액 1,100,000원~</div>
+                            </div>
+    
+                            <div class="tooltip vt_mid">고소장/고발장, 이의신청서, 보충진술서/의견서, 항고장/항고이유서 등</div>
+                        </a>
+                        <a href="m_box2.html" class="box">
+                            <h3 class="m_h3">민사 소송</h3>
+                            <div class="pr">
+                                <div class="mb9">기본 440,000원~</div>
+                                <div class="mb9">고액 1,100,000원~</div>
+                            </div>
+    
+                            <div class="tooltip vt_mid">소장, 답변서, 준비서면, 소액사건, 가압류신청, 지급명령신청, 내용증명 등</div>
+                        </a>
+                        <a href="m_box3.html" class="box">
+                            <h3 class="m_h3">이혼 · 상속 소송</h3>
+                            <div class="pr">
+                                <div class="mb9">기본 440,000원~</div>
+                                <div class="mb9">고액 1,100,000원~</div>
+                            </div>
+    
+                            <div class="tooltip vt_mid">소장, 답변서, 준비서면 등</div>
+                        </a>
+                        <a href="m_box4.html" class="box">
+                            <h3 class="m_h3">상속포기 · 한정승인</h3>
+                            <div class="pr">
+                                <div class="mb9">기본 770,000원~</div>
+                                <div class="mb9">고액 1,100,000원~</div>
+                            </div>
+    
+                            <div class="tooltip vt_mid">상속 관련 서류 등</div>
+                        </a>
+                        <a href="m_box5.html" class="box">
+                            <h3 class="m_h3">학교폭력</h3>
+                            <div class="pr">
+                                <div class="mb9">기본 440,000원~</div>
+                                <div class="mb9">고액 1,100,000원~</div>
+                            </div>
+    
+                            <div class="tooltip vt_mid">학폭위 의견서(교육청 제출), 보호자 의견서 등</div>
+                        </a>
+                        <a href="m_box6.html" class="box">
+                            <h3 class="m_h3">행정 심판 / 소송</h3>
+                            <div class="pr">
+                                <div class="mb9">기본 440,000원~</div>
+                                <div class="mb9">고액 1,100,000원~</div>
+                            </div>
+    
+                            <div class="tooltip vt_mid">심판청구서, 소장, 답변서, 준비서면 등</div>
+                        </a>
+                        <a href="m_box7.html" class="box">
+                            <h3 class="m_h3">계약서</h3>
+                            <div class="pr">
+                                <div class="mb9">기본 220,000원~</div>
+                                <div class="mb9">고액 1,100,000원~</div>
+                            </div>
+    
+                            <div class="tooltip vt_mid">동업계약서, 위탁계약서, 고용계약서, 투자계약서, 영문계약서 등</div>
+                        </a>
+                        <a href="m_box8.html" class="box">
+                            <h3 class="m_h3">영문 계약서</h3>
+                            <div class="pr">
+                                <div class="mb9">기본 220,000원~</div>
+                                <div class="mb9">고액 1,100,000원~</div>
+                            </div>
+    
+                            <div class="tooltip vt_mid">동업계약서, 위탁계약서, 고용계약서, 투자계약서, 영문계약서 등</div>
+                        </a>
+                        <a href="m_box9.html" class="box">
+                            <h3 class="m_h3">이용약관</h3>
+                            <div class="pr">
+                                <div class="mb9">기본 440,000원~</div>
+                                <div class="mb9">고액 1,100,000원~</div>
+                            </div>
+    
+                            <div class="tooltip vt_mid">이용약관</div>
+                        </a>
+                        <a href="m_box10.html" class="box">
+                            <h3 class="m_h3">개인정보처리방침</h3>
+                            <div class="pr">
+                                <div class="mb9">기본 440,000원~</div>
+                                <div class="mb9">고액 1,100,000원~</div>
+                            </div>
+    
+                            <div class="tooltip vt_mid">개인정보처리방침</div>
+                        </a>
+                    </div>
+                </article>
+    
+                <article class="banner pc">
+                    <a href="app_link.html" class="block">
+                        <h2 class="b_h2 vt_mid">로페이퍼 앱으로 더 편하고 빠르게 이용해보세요</h2>
+    
+                        <img src="../img/logo.png" alt="LawPaper" class="vt_mid">
+                    </a>
+                </article>
+    
+                <article class="banner mob">
+                    <a href="web_link.html" class="block">
+                        <h2 class="b_h2 vt_mid">로페이퍼 웹으로도 이용 하실 수 있습니다.</h2>
+    
+                        <img src="../img/logo.png" alt="LawPaper" class="vt_mid">
+                    </a>
+                </article>
+    
+                <article class="lawer_list">
+                    <h2 class="l_title">
+                        <div class="la">
+                            <span class="vt_mid">이번 달 추천 변호사</span>
+                        </div>
+                    </h2>
+    
+                    <div class="l_boxwrap">
+                        <a href="laywer_view.html" class="l_box">
+                            <div class="lb_left vt_mid">
+                                <div class="circle">
+                                    <div class="grid">
+                                        <img src="../img/profile.png" alt="프로필">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lb_right vt_mid">
+                                <div class="r1">김철수 변호사</div>
+                                <div class="r2">
+                                    변호사 자기소개 변호사 자기소개 변호사 자기소개 변호사 자기소개 변호사 자기소개 변호사 자기소개 변호사 자기소개 변호사 자기소개 
+                                </div>
+                            </div>
+                        </a>
+                        <a href="laywer_view.html" class="l_box">
+                            <div class="lb_left vt_mid">
+                                <div class="circle">
+                                    <div class="grid">
+                                        <img src="../img/profile.png" alt="프로필">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lb_right vt_mid">
+                                <div class="r1">김철수 변호사</div>
+                                <div class="r2">
+                                    변호사 자기소개 변호사 자기소개 변호사 자기소개 변호사 자기소개 변호사 자기소개 변호사 자기소개 변호사 자기소개 변호사 자기소개 
+                                </div>
+                            </div>
+                        </a>
+                        <a href="laywer_view.html" class="l_box">
+                            <div class="lb_left vt_mid">
+                                <div class="circle">
+                                    <div class="grid">
+                                        <img src="../img/profile.png" alt="프로필">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lb_right vt_mid">
+                                <div class="r1">김철수 변호사</div>
+                                <div class="r2">
+                                    변호사 자기소개 변호사 자기소개 변호사 자기소개 변호사 자기소개 변호사 자기소개 변호사 자기소개 변호사 자기소개 변호사 자기소개 
+                                </div>
+                            </div>
+                        </a>
+                        <a href="laywer_view.html" class="l_box">
+                            <div class="lb_left vt_mid">
+                                <div class="circle">
+                                    <div class="grid">
+                                        <img src="../img/profile.png" alt="프로필">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lb_right vt_mid">
+                                <div class="r1">김철수 변호사</div>
+                                <div class="r2">
+                                    변호사 자기소개 변호사 자기소개 변호사 자기소개 변호사 자기소개 변호사 자기소개 변호사 자기소개 변호사 자기소개 변호사 자기소개 
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </section>
+
+    <script>
+
+        $('.stop_btn .stop').show();
+        $('.stop_btn .play').hide();
+    
+        $('.stop_btn').click(function(){
+            if($(this).hasClass('on')){
+                bannerSlide.autoplay.stop();
+                $('.stop_btn .stop').hide();
+                $('.stop_btn .play').show();
+                $(this).removeClass('on');
+            }else{
+                bannerSlide.autoplay.start();
+                $('.stop_btn .stop').show();
+                $('.stop_btn .play').hide();
+                $(this).addClass('on');
+            }
+        })
+    
+        $('#main .box').mouseenter(function(event){
+        
+            $(this).children('.tooltip').fadeIn(300)
+        
+            var pos = $(this).offset();
+            var mouseX = event.pageX
+            var mouseY = event.pageY
+        
+            $(this).children('.tooltip').css({'left': mouseX - pos.left+'px'});
+            $(this).children('.tooltip').css({'top': mouseY - pos.top +'px'});
+        
+            setTimeout(function(event){
+                var pos = $(this).offset();
+                var mouseX = event.pageX
+                var mouseY = event.pageY
+                console.log(mouseX)
+                console.log(mouseY)
+            },1000)
+        });
+        $('#main .box').mouseleave(function(){
+            $(this).children('.tooltip').fadeOut(300);
+        })
+        
+        
+        $('.rev_a').click(function(){
+            location.href='review.html';
+        
+            return false;
+        });
+    
+    
+    </script>
+
+    <footer class="pc_footer"> <!--is_join일때 addclass mb0-->
+        <div class="inner1120">
+            <div class="f_div">
+                <a href="introduce.html" class="f_a">회사소개</a>
+                <a href="join_term1.html" class="f_a">이용약관</a>
+                <a href="join_term2.html" class="f_a">개인정보처리방침</a>
+            </div>
+
+            <div class="f_padding">
+                <div class="addr">사업자주소가 들어갑니다</div>
+                <div class="f_info">
+                    <div class="mr20 vt_mid">대표자명 : 신동우</div>
+                    <div class="mr20 vt_mid">고객센터 010-4684-3472</div>
+                    <div class="mr20 vt_mid">이메일 : lawpaper@gmail.com</div>
+                </div>
+
+                <div class="b_num">사업자등록번호: 123-12-12312</div>
+                <div class="f_con">
+                    하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 
+                </div>
+
+                <div class="lc_area">
+                    <div class="f_logo vt_mid">
+                        <img src="../img/logo.png" alt="LawPaper">
+                    </div>
+                    <div class="copy vt_mid">Copyright ⓒ2023 lawpaper. All rights reserved</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <footer class="m_footer">
+        <a href="index.html" class="f_a vt_mid">
+            <img src="../img/nav1.png" alt="홈">
+            <div class="f_txt">홈</div>
+        </a>
+        <a href="#" class="f_a vt_mid go_doc">
+            <img src="../img/nav2.png" alt="서면작성 의뢰">
+            <div class="f_txt">서면작성 의뢰</div>
+        </a>
+        <a href="#" class="f_a vt_mid go_chat">
+            <span class="rel">
+                <img src="../img/nav3.png" alt="받은 견적서">
+
+                <span class="number">99</span>
+            </span>
+            <div class="f_txt">받은 견적서</div>
+            <!-- 
+                메뉴이름
+                의뢰인일때 = "받은 견적서"
+                변호사일때 = "보낸 견적서"
+             -->
+        </a>
+        <a href="myp_law.html" class="f_a vt_mid">
+            <img src="../img/nav4.png" alt="마이페이지">
+            <div class="f_txt">마이페이지</div>
+
+            <!--
+                비로그인 상태일땐 로그인팝업 (pop_logpop.html 나옴)
+            -->
+        </a>
+        <a href="cs.html" class="f_a vt_mid">
+            <img src="../img/nav5.png" alt="고객센터">
+            <div class="f_txt">고객센터</div>
+        </a>
+    </footer>
+
+</body>
+
+</html>

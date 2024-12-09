@@ -1,0 +1,2470 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - SHIN HYERIM</title>
+
+    <link rel="icon" href="../img/favicon.ico">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    <meta content="LawPaper" property='og:title' />
+    <meta content="" property='og:url' />
+    <meta content="나홀로 소송은 로페이퍼" property='og:description' />
+    <meta content="" property='og:image' />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+
+    
+    <header class="header"> <!--헤더 없을때 addclass none-->
+        <div class="nav_bg"></div>
+
+        <div class="head_con">
+            <div class="rel">
+                <button type="button" class="close_btn">
+                    <img src="../img/close_btn2.png" alt="닫기">
+                </button>
+                <div class="inner1120">
+                    <h1 class="h_left vt_mid">
+                        <a href="index.html" class="logo">
+                            <img src="../img/logo.png" alt="나홀로 소송은 로페이퍼">
+                        </a>
+                    </h1>
+                    <nav class="h_cen vt_mid">
+                        <a href="index.html" class="nav_a">홈</a>
+                        <a href="#" class="nav_a head2">서면작성 의뢰</a>
+                        <a href="chat.html" class="nav_a new">받은 견적서</a>
+                        <!-- 
+                            메뉴이름
+                            의뢰인일때 = "받은 견적서"
+                            변호사일때 = "보낸 견적서"
+                         -->
+        
+                        <a href="cs.html" class="nav_a">고객센터</a>
+                    </nav>
+    
+                    <div class="h_right vt_mid go_myp_law">
+                        <div class="h_profile vt_mid">
+                            <div class="circle">
+                                <div class="grid">
+                                    <img src="../img/l_profile.png" alt="프로필">
+                                </div>
+                            </div>
+                        </div>
+                        <span class="myname vt_mid">
+                            김철수 변호사님
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="head_m">
+            <div class="mh_left vt_mid">
+                <button type="button" class="back_btn" onclick="history.go(-1);">
+                    <img src="../img/back_btn.png" alt="뒤로가기">
+                </button>
+            </div>
+            <h1 class="mh_cen vt_mid">
+                <span class="padding">1:1 질문하기</span>
+            </h1>
+            <div class="mh_right vt_mid">
+                <button type="button" class="alarm">
+                    <img src="../img/alarm_btn.png" alt="알림">
+
+                    <span class="num vt_mid">99</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 팝업2 -->
+    <div class="pop pop2">
+
+        <div class="black_bg"></div>
+    
+    
+    
+        <div class="p_con">
+    
+            <div class="title_area">
+    
+                <h2 class="p_h2 vt_mid"></h2>
+    
+                <button type="button" class="close_btn vt_mid">
+    
+                    <img src="../img/close_btn.png" alt="닫기">
+    
+                </button>
+    
+            </div>
+    
+            <div class="con_area">
+    
+                <div class="grid">
+    
+                    <div class="text"></div>
+    
+                </div>
+    
+            </div>
+    
+            <div class="pbtn_area">
+    
+                <button type="button" class="pbtns btn1">확인</button>
+    
+                <button type="button" class="pbtns btn2">취소</button>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+
+    <!-- 팝업1 -->
+    <div class="pop pop1">
+
+        <div class="black_bg"></div>
+    
+    
+    
+        <div class="p_con">
+    
+            <div class="title_area">
+    
+                <h2 class="p_h2 vt_mid"></h2>
+    
+                <button type="button" class="close_btn vt_mid">
+    
+                    <img src="../img/close_btn.png" alt="닫기">
+    
+                </button>
+    
+            </div>
+    
+            <div class="con_area">
+    
+                <div class="grid">
+    
+                    <div class="text"></div>
+    
+                </div>
+    
+            </div>
+    
+            <div class="pbtn_area">
+    
+                <button type="button" class="pbtn">확인</button>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+
+    <section id="chat" class="page">
+
+        <div class="inner1120">
+    
+            <div class="contents">
+    
+                <div class="chat_wrap">
+    
+                    <div class="chat_left vt_top">
+    
+                        <div class="chat_list">
+    
+    <!--
+    
+        05/24 수정사항
+    
+        -채팅창 들어가서도 안읽은 메시지가 있을 경우 빨간점을 표기해주세요.
+    
+    
+    
+        => chat_a에 addClass('new')
+    
+    -->
+    
+    
+    
+    <!--
+    
+        <의뢰인일때 채팅창 하단메뉴>
+    
+            파일첨부 / 거래확정 및 리뷰 작성
+    
+    
+    
+        <변호사일때 채팅창 하단메뉴>
+    
+            파일첨부 / 결제창 생성하기 / 거래확정 요청하기
+    
+    -->
+    
+    
+    
+    
+    
+    <!--
+    
+        파일첨부 확장자별 아이콘
+    
+        www / img / file_icon 폴더
+    
+        확장자명 알수없을때 = file_none.png
+    
+    -->
+    
+    
+    
+                            <div class="list">
+    
+                                <button type="button" class="chat_a new">
+    
+                                    <div class="profile vt_mid">
+    
+                                        <div class="grid">
+    
+                                            <img src="../img/file1.png" alt="프로필">
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="margin vt_mid">
+    
+                                        <div class="name vt_mid">
+    
+                                            김땡땡 변호사님
+    
+                                        </div>
+    
+                                        <div class="status vt_mid">
+    
+                                            <span class="st_span vt_mid">거래중</span>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                </button>
+    
+                                <button type="button" class="chat_a new">
+    
+                                    <div class="profile vt_mid">
+    
+                                        <div class="grid">
+    
+                                            <img src="../img/file1.png" alt="프로필">
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="margin vt_mid">
+    
+                                        <div class="name vt_mid">
+    
+                                            김땡땡 변호사님
+    
+                                        </div>
+    
+                                    </div>
+    
+                                </button>
+    
+                                <button type="button" class="chat_a">
+    
+                                    <div class="profile vt_mid">
+    
+                                        <div class="grid">
+    
+                                            <img src="../img/file1.png" alt="프로필">
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="margin vt_mid">
+    
+                                        <div class="name vt_mid">
+    
+                                            김땡땡 변호사님
+    
+                                        </div>
+    
+                                        <div class="status vt_mid">
+    
+                                        </div>
+    
+                                    </div>
+    
+                                </button>
+    
+                                <button type="button" class="chat_a">
+    
+                                    <div class="profile vt_mid">
+    
+                                        <div class="grid">
+    
+                                            <img src="../img/file1.png" alt="프로필">
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="margin vt_mid">
+    
+                                        <div class="name vt_mid">
+    
+                                            김땡땡 변호사님
+    
+                                        </div>
+    
+                                        <div class="status vt_mid">
+    
+                                        </div>
+    
+                                    </div>
+    
+                                </button>
+    
+                            </div>
+    
+    
+    
+                            <button type="button" class="chat_a myp">
+    
+                                <div class="profile vt_mid">
+    
+                                    <div class="grid">
+    
+                                        <img src="../img/file1.png" alt="프로필">
+    
+                                    </div>
+    
+                                </div>
+    
+                                <div class="margin vt_mid">
+    
+                                    <div class="name vt_mid">
+    
+                                        이땡땡 의뢰인님
+    
+                                    </div>
+    
+                                    <div class="status vt_mid">
+    
+                                    </div>
+    
+                                </div>
+    
+                            </button>
+    
+                        </div>
+    
+                    </div>
+    
+    
+    
+                    <!--채팅에 있는 이름을 통해 변호사 상세페이지에 들어갈경우 "상담신청서 작성하기" 버튼을 없애주세요-->
+    
+    
+    
+                    <div class="chat_right vt_top">
+    
+    
+    
+                        <div class="tab on">
+    
+                            <div class="cr_top">
+    
+                                <div class="name vt_mid">
+    
+                                    <button type="button" class="back_btn" onclick="history.go(-1);"><img src="../img/back_btn.png" alt="뒤로가기"></button>    
+    
+                                    
+    
+                                    <a href="lawyer_view_nobtn.html" class="go_detail"> <!--채팅에 있는 이름을 통해 변호사 상세페이지에 들어갈경우 "상담신청서 작성하기" 버튼을 없애주세요-->
+    
+                                        <div class="profile vt_mid">
+    
+                                            <div class="grid">
+    
+                                                <img src="../img/file1.png" alt="프로필">
+    
+                                            </div>
+    
+                                        </div>
+    
+                                        <span class="vt_mid">김땡땡 변호사님</span>
+    
+                                    </a>
+    
+                                </div>
+    
+                                <div class="ct_out_area vt_mid">
+    
+                                    <button type="button" class="ct_out_btn">
+    
+                                        <img src="../img/chat_out.png" alt="나가기">
+    
+                                    </button>
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="cr_bot">
+    
+                                <div class="chat_contents">
+    
+                                    <div class="chat_block other big">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate bold">[견적서]</div>
+    
+    
+    
+                                                김땡땡 변호사님이 제안하신 견적은 <span class="bold">[55만원]</span>입니다. 추가 상담 과정에서 비용이 증액 또는 감액될 수 있습니다.<br><br>
+    
+                                                작업일은 결제일로부터 <span class="bold">[5일]</span> 소요될 것으로 예상됩니다.<br><br>
+    
+    
+    
+                                                <div class="cate bold">[자기소개]</div>
+    
+                                                안녕하세요~ 김땡땡 변호사입니다. 변호사님이 입력한 자기소개입니다.<br><br>
+    
+    
+    
+                                                <div class="file_area">
+    
+                                                    <button type="button" class="file_down">
+    
+                                                        <div class="down_gray">
+    
+                                                            <div class="grid">
+    
+                                                                <img src="../img/file1.png" alt="img"><!--변호사가 자기소개 이미지로 첨부한 사진-->
+    
+                                                            </div>
+    
+                                                        </div>
+    
+                                                        <!-- <div class="down_txt">파일이름.jpg</div> -->
+    
+                                                    </button>
+    
+                                                    <button type="button" class="file_down">
+    
+                                                        <div class="down_gray">
+    
+                                                            <div class="grid">
+    
+                                                                <img src="../img/file2.png" alt="img"><!--변호사가 자기소개 이미지로 첨부한 사진-->
+    
+                                                            </div>
+    
+                                                        </div>
+    
+                                                        <!-- <div class="down_txt">파일이름.jpg</div> -->
+    
+                                                    </button>
+    
+                                                </div>
+    
+                                            </div>
+    
+    
+    
+                                            <span class="time">오후 4:41</span>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block other big">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate bold">[첨부파일]</div>
+    
+                                                <div class="file_area">
+    
+                                                    <button type="button" class="file_down">
+    
+                                                        <div class="down_gray">
+    
+                                                            <div class="grid">
+    
+                                                                <img src="../img/file_icon/file_jpg.png" alt="다운" class="icon">
+    
+                                                            </div>
+    
+                                                        </div>
+    
+                                                        <div class="down_txt">파일이름.jpg</div>
+    
+                                                    </button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block my">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                네 알겠습니다 변호사님 감사합니다.
+    
+                                            </div>
+    
+    
+    
+                                            <span class="time">오후 4:41</span>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block my">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate bold">[첨부파일]</div>
+    
+                                                <div class="file_area">
+    
+                                                    <button type="button" class="file_down">
+    
+                                                        <div class="down_gray">
+    
+                                                            <div class="grid">
+    
+                                                                <img src="../img/file_icon/file_none.png" alt="다운" class="icon">
+    
+                                                            </div>
+    
+                                                        </div>
+    
+                                                        <div class="down_txt">파일이름.알수없음</div>
+    
+                                                    </button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block my">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate bold">[첨부파일]</div>
+    
+                                                <div class="file_area">
+    
+                                                    <button type="button" class="file_down">
+    
+                                                        <div class="down_gray">
+    
+                                                            <div class="grid">
+    
+                                                                <img src="../img/file_icon/file_pdf.png" alt="다운" class="icon">
+    
+                                                            </div>
+    
+                                                        </div>
+    
+                                                        <div class="down_txt">파일이름.pdf</div>
+    
+                                                    </button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block msg">
+    
+                                        <div class="chat_msg">
+    
+                                            거래는 선불이 원칙이며, 로페이퍼를 통한 안전결제를 권장합니다.<br>
+    
+                                            개인 간 계좌이체는 분쟁의 위험이 있습니다.<br>
+    
+                                            결제 진행 시 변호사님께 “결제창 띄워주세요”라고 해보세요.
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block other big">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate center bold">[결제 요청]</div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">서비스 내용</span><br>
+    
+                                                형사 / 고소장<br>
+    
+                                                </div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">작업일</span><br>
+    
+                                                결제 후 7일<br>
+    
+                                                </div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">금액</span><br>
+    
+                                                    55만원
+    
+                                                </div>
+    
+    
+    
+                                                <div class="btn_area">
+    
+                                                    <button type="button" class="cr_btn open_paypop">결제하기</button>
+    
+                                                </div>
+    
+                                            </div>
+    
+    
+    
+                                            <span class="time">오후 4:41</span>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block my">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate center bold">[결제 완료]</div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">[55만원]</span> 결제가 완료되었습니다.
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block other big">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate center bold">[거래확정 요청]</div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">서비스 내용</span><br>
+    
+                                                형사 / 고소장<br>
+    
+                                                </div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">작업일</span><br>
+    
+                                                결제 후 7일<br>
+    
+                                                </div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">금액</span><br>
+    
+                                                    55만원
+    
+                                                </div>
+    
+    
+    
+                                                <div class="btn_area">
+    
+                                                    <button type="button" class="cr_btn" onclick="location.href='write_review.html'">거래 확정하기</button>
+    
+                                                </div>
+    
+                                            </div>
+    
+    
+    
+                                            <span class="time">오후 4:41</span>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block my">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate center bold">[거래확정]</div>
+    
+                                                <div class="pay_block">
+    
+                                                    거래 확정이 완료되었습니다.<br>
+    
+                                                    의뢰인이 작성한 리뷰를 확인해보세요.
+    
+                                                </div>
+    
+                                                <div class="btn_area">
+    
+                                                    <button type="button" class="cr_btn" onclick="location.href='lawyer_view.html'">리뷰 확인하기</button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                </div>
+    
+    
+    
+                                <div class="input_area">
+    
+                                    <div class="i_top">
+    
+                                        <input type="text" name="send" id="send" class="input" placeholder="메세지를 입력하세요">
+    
+    
+    
+                                        <button type="button" class="send_btn">전송</button>
+    
+                                    </div>
+    
+                                    <div class="i_bot">
+    
+                                        <input type="file" name="my_file" id="my_file" class="file">
+    
+                                        <label for="my_file" class="f_lab">
+    
+                                            <img src="../img/chat_icon1.png" alt="Icon" class="icon">
+    
+                                            <span class="vt_mid">파일첨부</span>
+    
+                                        </label>
+    
+    
+    
+    
+    
+                                        <?php 
+    
+                                            if($mb['mb_type'] == 'R') {	/* 변호사일때 */
+    
+                                        ?>
+    
+                                        <button type="button" class="pay_btn">
+    
+                                            <img src="../img/chat_icon2.png" alt="Icon" class="icon">
+    
+                                            <span class="vt_mid">결제창 생성하기</span><!--변호사만-->
+    
+                                        </button>
+    
+                                        <button type="button" class="pay_btn">
+    
+                                            <img src="../img/chat_icon3.png" alt="Icon" class="icon">
+    
+                                            <span class="vt_mid">거래확정 요청하기</span><!--변호사만-->
+    
+                                        </button>
+    
+                                        <?php
+    
+                                            } else {
+    
+                                        ?>				
+    
+                                            <a href="write_review.html" class="go_rev">
+    
+                                                <img src="../img/chat_icon3.png" alt="Icon" class="icon">
+    
+                                                <span class="vt_mid">거래확정 및 리뷰 작성</span><!--의뢰인만-->
+    
+                                            </a>
+    
+                                        <?
+    
+                                            }
+    
+                                        ?>
+    
+                                    </div>
+    
+                                </div>
+    
+                            </div>
+    
+                        </div>
+    
+    
+    
+                        <div class="tab on">
+    
+                            <div class="cr_top">
+    
+                                <div class="name vt_mid">
+    
+                                    <button type="button" class="back_btn" onclick="history.go(-1);"><img src="../img/back_btn.png" alt="뒤로가기"></button>    
+    
+                                    
+    
+                                    <a href="lawyer_view_nobtn.html" class="go_detail"> <!--채팅에 있는 이름을 통해 변호사 상세페이지에 들어갈경우 "상담신청서 작성하기" 버튼을 없애주세요-->
+    
+                                        <div class="profile vt_mid">
+    
+                                            <div class="grid">
+    
+                                                <img src="../img/file1.png" alt="프로필">
+    
+                                            </div>
+    
+                                        </div>
+    
+                                        <span class="vt_mid">김땡땡 변호사님</span>
+    
+                                    </a>
+    
+                                </div>
+    
+                                <div class="ct_out_area vt_mid">
+    
+                                    <button type="button" class="ct_out_btn">
+    
+                                        <img src="../img/chat_out.png" alt="나가기">
+    
+                                    </button>
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="cr_bot">
+    
+                                <div class="chat_contents">
+    
+                                    <div class="chat_block other big">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate bold">[견적서]</div>
+    
+    
+    
+                                                김땡땡 변호사님이 제안하신 견적은 <span class="bold">[55만원]</span>입니다. 추가 상담 과정에서 비용이 증액 또는 감액될 수 있습니다.<br><br>
+    
+                                                작업일은 결제일로부터 <span class="bold">[5일]</span> 소요될 것으로 예상됩니다.<br><br>
+    
+    
+    
+                                                <div class="cate bold">[자기소개]</div>
+    
+                                                안녕하세요~ 김땡땡 변호사입니다. 변호사님이 입력한 자기소개입니다.<br><br>
+    
+    
+    
+                                                <div class="file_area">
+    
+                                                    <button type="button" class="file_down">
+    
+                                                        <div class="down_gray">
+    
+                                                            <div class="grid">
+    
+                                                                <img src="../img/file1.png" alt="img"><!--변호사가 자기소개 이미지로 첨부한 사진-->
+    
+                                                            </div>
+    
+                                                        </div>
+    
+                                                        <!-- <div class="down_txt">파일이름.jpg</div> -->
+    
+                                                    </button>
+    
+                                                    <button type="button" class="file_down">
+    
+                                                        <div class="down_gray">
+    
+                                                            <div class="grid">
+    
+                                                                <img src="../img/file2.png" alt="img"><!--변호사가 자기소개 이미지로 첨부한 사진-->
+    
+                                                            </div>
+    
+                                                        </div>
+    
+                                                        <!-- <div class="down_txt">파일이름.jpg</div> -->
+    
+                                                    </button>
+    
+                                                </div>
+    
+                                            </div>
+    
+    
+    
+                                            <span class="time">오후 4:41</span>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block other big">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate bold">[첨부파일]</div>
+    
+                                                <div class="file_area">
+    
+                                                    <button type="button" class="file_down">
+    
+                                                        <div class="down_gray">
+    
+                                                            <div class="grid">
+    
+                                                                <img src="../img/file_icon/file_jpg.png" alt="다운" class="icon">
+    
+                                                            </div>
+    
+                                                        </div>
+    
+                                                        <div class="down_txt">파일이름.jpg</div>
+    
+                                                    </button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block my">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                네 알겠습니다 변호사님 감사합니다.
+    
+                                            </div>
+    
+    
+    
+                                            <span class="time">오후 4:41</span>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block my">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate bold">[첨부파일]</div>
+    
+                                                <div class="file_area">
+    
+                                                    <button type="button" class="file_down">
+    
+                                                        <div class="down_gray">
+    
+                                                            <div class="grid">
+    
+                                                                <img src="../img/file_icon/file_none.png" alt="다운" class="icon">
+    
+                                                            </div>
+    
+                                                        </div>
+    
+                                                        <div class="down_txt">파일이름.알수없음</div>
+    
+                                                    </button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block my">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate bold">[첨부파일]</div>
+    
+                                                <div class="file_area">
+    
+                                                    <button type="button" class="file_down">
+    
+                                                        <div class="down_gray">
+    
+                                                            <div class="grid">
+    
+                                                                <img src="../img/file_icon/file_pdf.png" alt="다운" class="icon">
+    
+                                                            </div>
+    
+                                                        </div>
+    
+                                                        <div class="down_txt">파일이름.pdf</div>
+    
+                                                    </button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block msg">
+    
+                                        <div class="chat_msg">
+    
+                                            거래는 선불이 원칙이며, 로페이퍼를 통한 안전결제를 권장합니다.<br>
+    
+                                            개인 간 계좌이체는 분쟁의 위험이 있습니다.<br>
+    
+                                            결제 진행 시 변호사님께 “결제창 띄워주세요”라고 해보세요.
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block other big">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate center bold">[결제 요청]</div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">서비스 내용</span><br>
+    
+                                                형사 / 고소장<br>
+    
+                                                </div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">작업일</span><br>
+    
+                                                결제 후 7일<br>
+    
+                                                </div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">금액</span><br>
+    
+                                                    55만원
+    
+                                                </div>
+    
+    
+    
+                                                <div class="btn_area">
+    
+                                                    <button type="button" class="cr_btn open_paypop">결제하기</button>
+    
+                                                </div>
+    
+                                            </div>
+    
+    
+    
+                                            <span class="time">오후 4:41</span>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block my">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate center bold">[결제 완료]</div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">[55만원]</span> 결제가 완료되었습니다.
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block other big">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate center bold">[거래확정 요청]</div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">서비스 내용</span><br>
+    
+                                                형사 / 고소장<br>
+    
+                                                </div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">작업일</span><br>
+    
+                                                결제 후 7일<br>
+    
+                                                </div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">금액</span><br>
+    
+                                                    55만원
+    
+                                                </div>
+    
+    
+    
+                                                <div class="btn_area">
+    
+                                                    <button type="button" class="cr_btn" onclick="location.href='write_review.html'">거래 확정하기</button>
+    
+                                                </div>
+    
+                                            </div>
+    
+    
+    
+                                            <span class="time">오후 4:41</span>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block my">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate center bold">[거래확정]</div>
+    
+                                                <div class="pay_block">
+    
+                                                    거래 확정이 완료되었습니다.<br>
+    
+                                                    의뢰인이 작성한 리뷰를 확인해보세요.
+    
+                                                </div>
+    
+                                                <div class="btn_area">
+    
+                                                    <button type="button" class="cr_btn" onclick="location.href='lawyer_view.html'">리뷰 확인하기</button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                </div>
+    
+    
+    
+                                <div class="input_area">
+    
+                                    <div class="i_top">
+    
+                                        <input type="text" name="send" id="send" class="input" placeholder="메세지를 입력하세요">
+    
+    
+    
+                                        <button type="button" class="send_btn">전송</button>
+    
+                                    </div>
+    
+                                    <div class="i_bot">
+    
+                                        <input type="file" name="my_file" id="my_file" class="file">
+    
+                                        <label for="my_file" class="f_lab">
+    
+                                            <img src="../img/chat_icon1.png" alt="Icon" class="icon">
+    
+                                            <span class="vt_mid">파일첨부</span>
+    
+                                        </label>
+    
+    
+    
+    
+    
+                                        <?php 
+    
+                                            if($mb['mb_type'] == 'R') {	/* 변호사일때 */
+    
+                                        ?>
+    
+                                        <button type="button" class="pay_btn">
+    
+                                            <img src="../img/chat_icon2.png" alt="Icon" class="icon">
+    
+                                            <span class="vt_mid">결제창 생성하기</span><!--변호사만-->
+    
+                                        </button>
+    
+                                        <button type="button" class="pay_btn">
+    
+                                            <img src="../img/chat_icon3.png" alt="Icon" class="icon">
+    
+                                            <span class="vt_mid">거래확정 요청하기</span><!--변호사만-->
+    
+                                        </button>
+    
+                                        <?php
+    
+                                            } else {
+    
+                                        ?>				
+    
+                                            <a href="write_review.html" class="go_rev">
+    
+                                                <img src="../img/chat_icon3.png" alt="Icon" class="icon">
+    
+                                                <span class="vt_mid">거래확정 및 리뷰 작성</span><!--의뢰인만-->
+    
+                                            </a>
+    
+                                        <?
+    
+                                            }
+    
+                                        ?>
+    
+                                    </div>
+    
+                                </div>
+    
+                            </div>
+    
+                        </div>
+    
+    
+    
+                        <div class="tab on">
+    
+                            <div class="cr_top">
+    
+                                <div class="name vt_mid">
+    
+                                    <button type="button" class="back_btn" onclick="history.go(-1);"><img src="../img/back_btn.png" alt="뒤로가기"></button>    
+    
+                                    
+    
+                                    <a href="lawyer_view_nobtn.html" class="go_detail"> <!--채팅에 있는 이름을 통해 변호사 상세페이지에 들어갈경우 "상담신청서 작성하기" 버튼을 없애주세요-->
+    
+                                        <div class="profile vt_mid">
+    
+                                            <div class="grid">
+    
+                                                <img src="../img/file1.png" alt="프로필">
+    
+                                            </div>
+    
+                                        </div>
+    
+                                        <span class="vt_mid">김땡땡 변호사님</span>
+    
+                                    </a>
+    
+                                </div>
+    
+                                <div class="ct_out_area vt_mid">
+    
+                                    <button type="button" class="ct_out_btn">
+    
+                                        <img src="../img/chat_out.png" alt="나가기">
+    
+                                    </button>
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="cr_bot">
+    
+                                <div class="chat_contents">
+    
+                                    <div class="chat_block other big">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate bold">[견적서]</div>
+    
+    
+    
+                                                김땡땡 변호사님이 제안하신 견적은 <span class="bold">[55만원]</span>입니다. 추가 상담 과정에서 비용이 증액 또는 감액될 수 있습니다.<br><br>
+    
+                                                작업일은 결제일로부터 <span class="bold">[5일]</span> 소요될 것으로 예상됩니다.<br><br>
+    
+    
+    
+                                                <div class="cate bold">[자기소개]</div>
+    
+                                                안녕하세요~ 김땡땡 변호사입니다. 변호사님이 입력한 자기소개입니다.<br><br>
+    
+    
+    
+                                                <div class="file_area">
+    
+                                                    <button type="button" class="file_down">
+    
+                                                        <div class="down_gray">
+    
+                                                            <div class="grid">
+    
+                                                                <img src="../img/file1.png" alt="img"><!--변호사가 자기소개 이미지로 첨부한 사진-->
+    
+                                                            </div>
+    
+                                                        </div>
+    
+                                                        <!-- <div class="down_txt">파일이름.jpg</div> -->
+    
+                                                    </button>
+    
+                                                    <button type="button" class="file_down">
+    
+                                                        <div class="down_gray">
+    
+                                                            <div class="grid">
+    
+                                                                <img src="../img/file2.png" alt="img"><!--변호사가 자기소개 이미지로 첨부한 사진-->
+    
+                                                            </div>
+    
+                                                        </div>
+    
+                                                        <!-- <div class="down_txt">파일이름.jpg</div> -->
+    
+                                                    </button>
+    
+                                                </div>
+    
+                                            </div>
+    
+    
+    
+                                            <span class="time">오후 4:41</span>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block other big">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate bold">[첨부파일]</div>
+    
+                                                <div class="file_area">
+    
+                                                    <button type="button" class="file_down">
+    
+                                                        <div class="down_gray">
+    
+                                                            <div class="grid">
+    
+                                                                <img src="../img/file_icon/file_jpg.png" alt="다운" class="icon">
+    
+                                                            </div>
+    
+                                                        </div>
+    
+                                                        <div class="down_txt">파일이름.jpg</div>
+    
+                                                    </button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block my">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                네 알겠습니다 변호사님 감사합니다.
+    
+                                            </div>
+    
+    
+    
+                                            <span class="time">오후 4:41</span>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block my">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate bold">[첨부파일]</div>
+    
+                                                <div class="file_area">
+    
+                                                    <button type="button" class="file_down">
+    
+                                                        <div class="down_gray">
+    
+                                                            <div class="grid">
+    
+                                                                <img src="../img/file_icon/file_none.png" alt="다운" class="icon">
+    
+                                                            </div>
+    
+                                                        </div>
+    
+                                                        <div class="down_txt">파일이름.알수없음</div>
+    
+                                                    </button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block my">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate bold">[첨부파일]</div>
+    
+                                                <div class="file_area">
+    
+                                                    <button type="button" class="file_down">
+    
+                                                        <div class="down_gray">
+    
+                                                            <div class="grid">
+    
+                                                                <img src="../img/file_icon/file_pdf.png" alt="다운" class="icon">
+    
+                                                            </div>
+    
+                                                        </div>
+    
+                                                        <div class="down_txt">파일이름.pdf</div>
+    
+                                                    </button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block msg">
+    
+                                        <div class="chat_msg">
+    
+                                            거래는 선불이 원칙이며, 로페이퍼를 통한 안전결제를 권장합니다.<br>
+    
+                                            개인 간 계좌이체는 분쟁의 위험이 있습니다.<br>
+    
+                                            결제 진행 시 변호사님께 “결제창 띄워주세요”라고 해보세요.
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block other big">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate center bold">[결제 요청]</div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">서비스 내용</span><br>
+    
+                                                형사 / 고소장<br>
+    
+                                                </div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">작업일</span><br>
+    
+                                                결제 후 7일<br>
+    
+                                                </div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">금액</span><br>
+    
+                                                    55만원
+    
+                                                </div>
+    
+    
+    
+                                                <div class="btn_area">
+    
+                                                    <button type="button" class="cr_btn open_paypop">결제하기</button>
+    
+                                                </div>
+    
+                                            </div>
+    
+    
+    
+                                            <span class="time">오후 4:41</span>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block my">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate center bold">[결제 완료]</div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">[55만원]</span> 결제가 완료되었습니다.
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block other big">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate center bold">[거래확정 요청]</div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">서비스 내용</span><br>
+    
+                                                형사 / 고소장<br>
+    
+                                                </div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">작업일</span><br>
+    
+                                                결제 후 7일<br>
+    
+                                                </div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">금액</span><br>
+    
+                                                    55만원
+    
+                                                </div>
+    
+    
+    
+                                                <div class="btn_area">
+    
+                                                    <button type="button" class="cr_btn" onclick="location.href='write_review.html'">거래 확정하기</button>
+    
+                                                </div>
+    
+                                            </div>
+    
+    
+    
+                                            <span class="time">오후 4:41</span>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block my">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate center bold">[거래확정]</div>
+    
+                                                <div class="pay_block">
+    
+                                                    거래 확정이 완료되었습니다.<br>
+    
+                                                    의뢰인이 작성한 리뷰를 확인해보세요.
+    
+                                                </div>
+    
+                                                <div class="btn_area">
+    
+                                                    <button type="button" class="cr_btn" onclick="location.href='lawyer_view.html'">리뷰 확인하기</button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                </div>
+    
+    
+    
+                                <div class="input_area">
+    
+                                    <div class="i_top">
+    
+                                        <input type="text" name="send" id="send" class="input" placeholder="메세지를 입력하세요">
+    
+    
+    
+                                        <button type="button" class="send_btn">전송</button>
+    
+                                    </div>
+    
+                                    <div class="i_bot">
+    
+                                        <input type="file" name="my_file" id="my_file" class="file">
+    
+                                        <label for="my_file" class="f_lab">
+    
+                                            <img src="../img/chat_icon1.png" alt="Icon" class="icon">
+    
+                                            <span class="vt_mid">파일첨부</span>
+    
+                                        </label>
+    
+    
+    
+    
+    
+                                        <?php 
+    
+                                            if($mb['mb_type'] == 'R') {	/* 변호사일때 */
+    
+                                        ?>
+    
+                                        <button type="button" class="pay_btn">
+    
+                                            <img src="../img/chat_icon2.png" alt="Icon" class="icon">
+    
+                                            <span class="vt_mid">결제창 생성하기</span><!--변호사만-->
+    
+                                        </button>
+    
+                                        <button type="button" class="pay_btn">
+    
+                                            <img src="../img/chat_icon3.png" alt="Icon" class="icon">
+    
+                                            <span class="vt_mid">거래확정 요청하기</span><!--변호사만-->
+    
+                                        </button>
+    
+                                        <?php
+    
+                                            } else {
+    
+                                        ?>				
+    
+                                            <a href="write_review.html" class="go_rev">
+    
+                                                <img src="../img/chat_icon3.png" alt="Icon" class="icon">
+    
+                                                <span class="vt_mid">거래확정 및 리뷰 작성</span><!--의뢰인만-->
+    
+                                            </a>
+    
+                                        <?
+    
+                                            }
+    
+                                        ?>
+    
+                                    </div>
+    
+                                </div>
+    
+                            </div>
+    
+                        </div>
+    
+    
+    
+                        <div class="tab on">
+    
+                            <div class="cr_top">
+    
+                                <div class="name vt_mid">
+    
+                                    <button type="button" class="back_btn" onclick="history.go(-1);"><img src="../img/back_btn.png" alt="뒤로가기"></button>    
+    
+                                    
+    
+                                    <a href="lawyer_view_nobtn.html" class="go_detail"> <!--채팅에 있는 이름을 통해 변호사 상세페이지에 들어갈경우 "상담신청서 작성하기" 버튼을 없애주세요-->
+    
+                                        <div class="profile vt_mid">
+    
+                                            <div class="grid">
+    
+                                                <img src="../img/file1.png" alt="프로필">
+    
+                                            </div>
+    
+                                        </div>
+    
+                                        <span class="vt_mid">김땡땡 변호사님</span>
+    
+                                    </a>
+    
+                                </div>
+    
+                                <div class="ct_out_area vt_mid">
+    
+                                    <button type="button" class="ct_out_btn">
+    
+                                        <img src="../img/chat_out.png" alt="나가기">
+    
+                                    </button>
+    
+                                </div>
+    
+                            </div>
+    
+                            <div class="cr_bot">
+    
+                                <div class="chat_contents">
+    
+                                    <div class="chat_block other big">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate bold">[견적서]</div>
+    
+    
+    
+                                                김땡땡 변호사님이 제안하신 견적은 <span class="bold">[55만원]</span>입니다. 추가 상담 과정에서 비용이 증액 또는 감액될 수 있습니다.<br><br>
+    
+                                                작업일은 결제일로부터 <span class="bold">[5일]</span> 소요될 것으로 예상됩니다.<br><br>
+    
+    
+    
+                                                <div class="cate bold">[자기소개]</div>
+    
+                                                안녕하세요~ 김땡땡 변호사입니다. 변호사님이 입력한 자기소개입니다.<br><br>
+    
+    
+    
+                                                <div class="file_area">
+    
+                                                    <button type="button" class="file_down">
+    
+                                                        <div class="down_gray">
+    
+                                                            <div class="grid">
+    
+                                                                <img src="../img/file1.png" alt="img"><!--변호사가 자기소개 이미지로 첨부한 사진-->
+    
+                                                            </div>
+    
+                                                        </div>
+    
+                                                        <!-- <div class="down_txt">파일이름.jpg</div> -->
+    
+                                                    </button>
+    
+                                                    <button type="button" class="file_down">
+    
+                                                        <div class="down_gray">
+    
+                                                            <div class="grid">
+    
+                                                                <img src="../img/file2.png" alt="img"><!--변호사가 자기소개 이미지로 첨부한 사진-->
+    
+                                                            </div>
+    
+                                                        </div>
+    
+                                                        <!-- <div class="down_txt">파일이름.jpg</div> -->
+    
+                                                    </button>
+    
+                                                </div>
+    
+                                            </div>
+    
+    
+    
+                                            <span class="time">오후 4:41</span>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block other big">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate bold">[첨부파일]</div>
+    
+                                                <div class="file_area">
+    
+                                                    <button type="button" class="file_down">
+    
+                                                        <div class="down_gray">
+    
+                                                            <div class="grid">
+    
+                                                                <img src="../img/file_icon/file_jpg.png" alt="다운" class="icon">
+    
+                                                            </div>
+    
+                                                        </div>
+    
+                                                        <div class="down_txt">파일이름.jpg</div>
+    
+                                                    </button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block my">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                네 알겠습니다 변호사님 감사합니다.
+    
+                                            </div>
+    
+    
+    
+                                            <span class="time">오후 4:41</span>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block my">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate bold">[첨부파일]</div>
+    
+                                                <div class="file_area">
+    
+                                                    <button type="button" class="file_down">
+    
+                                                        <div class="down_gray">
+    
+                                                            <div class="grid">
+    
+                                                                <img src="../img/file_icon/file_none.png" alt="다운" class="icon">
+    
+                                                            </div>
+    
+                                                        </div>
+    
+                                                        <div class="down_txt">파일이름.알수없음</div>
+    
+                                                    </button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block my">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate bold">[첨부파일]</div>
+    
+                                                <div class="file_area">
+    
+                                                    <button type="button" class="file_down">
+    
+                                                        <div class="down_gray">
+    
+                                                            <div class="grid">
+    
+                                                                <img src="../img/file_icon/file_pdf.png" alt="다운" class="icon">
+    
+                                                            </div>
+    
+                                                        </div>
+    
+                                                        <div class="down_txt">파일이름.pdf</div>
+    
+                                                    </button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block msg">
+    
+                                        <div class="chat_msg">
+    
+                                            거래는 선불이 원칙이며, 로페이퍼를 통한 안전결제를 권장합니다.<br>
+    
+                                            개인 간 계좌이체는 분쟁의 위험이 있습니다.<br>
+    
+                                            결제 진행 시 변호사님께 “결제창 띄워주세요”라고 해보세요.
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block other big">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate center bold">[결제 요청]</div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">서비스 내용</span><br>
+    
+                                                형사 / 고소장<br>
+    
+                                                </div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">작업일</span><br>
+    
+                                                결제 후 7일<br>
+    
+                                                </div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">금액</span><br>
+    
+                                                    55만원
+    
+                                                </div>
+    
+    
+    
+                                                <div class="btn_area">
+    
+                                                    <button type="button" class="cr_btn open_paypop">결제하기</button>
+    
+                                                </div>
+    
+                                            </div>
+    
+    
+    
+                                            <span class="time">오후 4:41</span>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block my">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate center bold">[결제 완료]</div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">[55만원]</span> 결제가 완료되었습니다.
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block other big">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate center bold">[거래확정 요청]</div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">서비스 내용</span><br>
+    
+                                                형사 / 고소장<br>
+    
+                                                </div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">작업일</span><br>
+    
+                                                결제 후 7일<br>
+    
+                                                </div>
+    
+                                                <div class="pay_block">
+    
+                                                    <span class="bold">금액</span><br>
+    
+                                                    55만원
+    
+                                                </div>
+    
+    
+    
+                                                <div class="btn_area">
+    
+                                                    <button type="button" class="cr_btn" onclick="location.href='write_review.html'">거래 확정하기</button>
+    
+                                                </div>
+    
+                                            </div>
+    
+    
+    
+                                            <span class="time">오후 4:41</span>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="chat_block my">
+    
+                                        <div class="chat_box">
+    
+                                            <div class="pre">
+    
+                                                <div class="cate center bold">[거래확정]</div>
+    
+                                                <div class="pay_block">
+    
+                                                    거래 확정이 완료되었습니다.<br>
+    
+                                                    의뢰인이 작성한 리뷰를 확인해보세요.
+    
+                                                </div>
+    
+                                                <div class="btn_area">
+    
+                                                    <button type="button" class="cr_btn" onclick="location.href='lawyer_view.html'">리뷰 확인하기</button>
+    
+                                                </div>
+    
+                                            </div>
+    
+                                        </div>
+    
+                                    </div>
+    
+                                </div>
+    
+    
+    
+                                <div class="input_area">
+    
+                                    <div class="i_top">
+    
+                                        <input type="text" name="send" id="send" class="input" placeholder="메세지를 입력하세요">
+    
+    
+    
+                                        <button type="button" class="send_btn">전송</button>
+    
+                                    </div>
+    
+                                    <div class="i_bot">
+    
+                                        <input type="file" name="my_file" id="my_file" class="file">
+    
+                                        <label for="my_file" class="f_lab">
+    
+                                            <img src="../img/chat_icon1.png" alt="Icon" class="icon">
+    
+                                            <span class="vt_mid">파일첨부</span>
+    
+                                        </label>
+    
+    
+    
+    
+    
+                                        <?php 
+    
+                                            if($mb['mb_type'] == 'R') {	/* 변호사일때 */
+    
+                                        ?>
+    
+                                        <button type="button" class="pay_btn">
+    
+                                            <img src="../img/chat_icon2.png" alt="Icon" class="icon">
+    
+                                            <span class="vt_mid">결제창 생성하기</span><!--변호사만-->
+    
+                                        </button>
+    
+                                        <button type="button" class="pay_btn">
+    
+                                            <img src="../img/chat_icon3.png" alt="Icon" class="icon">
+    
+                                            <span class="vt_mid">거래확정 요청하기</span><!--변호사만-->
+    
+                                        </button>
+    
+                                        <?php
+    
+                                            } else {
+    
+                                        ?>				
+    
+                                            <a href="write_review.html" class="go_rev">
+    
+                                                <img src="../img/chat_icon3.png" alt="Icon" class="icon">
+    
+                                                <span class="vt_mid">거래확정 및 리뷰 작성</span><!--의뢰인만-->
+    
+                                            </a>
+    
+                                        <?
+    
+                                            }
+    
+                                        ?>
+    
+                                    </div>
+    
+                                </div>
+    
+                            </div>
+    
+                        </div>
+    
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </div>
+    
+    </section>
+    
+    
+    
+    <script>
+    
+        $('.ct_out_btn').click(function(){
+    
+            $('.pop2').addClass('on');
+    
+            $('.pop2 .p_h2').text('채팅방 나가기');
+    
+            $('.pop2 .text').text('채팅방을 나가시겠습니까?');
+    
+        });
+    
+    
+    
+        $('#chat .pay_btn').click(function(){
+    
+            $('.pop2').addClass('on');
+    
+            $('.pop2 .p_h2').text('결제창 생성하기');
+    
+            $('.pop2 .text').text('결제창을 생성하시겠습니까?');
+    
+        });
+    
+    
+    
+        $('.pop2 .pbtns.btn1').click(function(){
+    
+            var winW = $(window).innerWidth();
+    
+    
+    
+            if($('.pop2 .p_h2').text() == "결제창 생성하기"){
+    
+                $('.pop2').removeClass('on');
+    
+            }else{
+    
+                if(winW > 960){
+    
+                    location.href='chat.html';
+    
+                }else{
+    
+                    location.href='chat_mob_list.html';
+    
+                }
+    
+            }
+    
+        });
+    
+    
+    
+    
+    
+        $('.chat_box').each(function(data){
+    
+            var ctHeight = $(this).innerHeight();
+    
+    
+    
+            if(ctHeight > 110) {
+    
+                $(this).parent().addClass('big');
+    
+            }
+    
+        });
+    
+    
+    
+    
+    
+        $('.chat_a').click(function(){
+    
+            if($(this).hasClass('myp') == false){
+    
+                $('.chat_right .tab').removeClass('on');
+    
+                $('.chat_right .tab').eq($(this).index()).addClass('on');
+    
+            }
+    
+        })
+    
+    </script>
+
+
+    <footer class="pc_footer"> <!--is_join일때 addclass mb0-->
+        <div class="inner1120">
+            <div class="f_div">
+                <a href="introduce.html" class="f_a">회사소개</a>
+                <a href="join_term1.html" class="f_a">이용약관</a>
+                <a href="join_term2.html" class="f_a">개인정보처리방침</a>
+            </div>
+
+            <div class="f_padding">
+                <div class="addr">사업자주소가 들어갑니다</div>
+                <div class="f_info">
+                    <div class="mr20 vt_mid">대표자명 : 신동우</div>
+                    <div class="mr20 vt_mid">고객센터 010-4684-3472</div>
+                    <div class="mr20 vt_mid">이메일 : lawpaper@gmail.com</div>
+                </div>
+
+                <div class="b_num">사업자등록번호: 123-12-12312</div>
+                <div class="f_con">
+                    하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 
+                </div>
+
+                <div class="lc_area">
+                    <div class="f_logo vt_mid">
+                        <img src="../img/logo.png" alt="LawPaper">
+                    </div>
+                    <div class="copy vt_mid">Copyright ⓒ2023 lawpaper. All rights reserved</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <footer class="m_footer">
+        <a href="index.html" class="f_a vt_mid">
+            <img src="../img/nav1.png" alt="홈">
+            <div class="f_txt">홈</div>
+        </a>
+        <a href="#" class="f_a vt_mid go_doc">
+            <img src="../img/nav2.png" alt="서면작성 의뢰">
+            <div class="f_txt">서면작성 의뢰</div>
+        </a>
+        <a href="#" class="f_a vt_mid go_chat">
+            <span class="rel">
+                <img src="../img/nav3.png" alt="받은 견적서">
+
+                <span class="number">99</span>
+            </span>
+            <div class="f_txt">받은 견적서</div>
+            <!-- 
+                메뉴이름
+                의뢰인일때 = "받은 견적서"
+                변호사일때 = "보낸 견적서"
+             -->
+        </a>
+        <a href="myp_law.html" class="f_a vt_mid">
+            <img src="../img/nav4.png" alt="마이페이지">
+            <div class="f_txt">마이페이지</div>
+
+            <!--
+                비로그인 상태일땐 로그인팝업 (pop_logpop.html 나옴)
+            -->
+        </a>
+        <a href="cs.html" class="f_a vt_mid">
+            <img src="../img/nav5.png" alt="고객센터">
+            <div class="f_txt">고객센터</div>
+        </a>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - SHIN HYERIM</title>
+
+    <link rel="icon" href="../img/favicon.ico">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    <meta content="LawPaper" property='og:title' />
+    <meta content="" property='og:url' />
+    <meta content="나홀로 소송은 로페이퍼" property='og:description' />
+    <meta content="" property='og:image' />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+
+    
+    <header class="header"> <!--헤더 없을때 addclass none-->
+        <div class="nav_bg"></div>
+
+        <div class="head_con">
+            <div class="rel">
+                <button type="button" class="close_btn">
+                    <img src="../img/close_btn2.png" alt="닫기">
+                </button>
+                <div class="inner1120">
+                    <h1 class="h_left vt_mid">
+                        <a href="index.html" class="logo">
+                            <img src="../img/logo.png" alt="나홀로 소송은 로페이퍼">
+                        </a>
+                    </h1>
+                    <nav class="h_cen vt_mid">
+                        <a href="index.html" class="nav_a">홈</a>
+                        <a href="#" class="nav_a head2">서면작성 의뢰</a>
+                        <a href="chat.html" class="nav_a new">받은 견적서</a>
+                        <!-- 
+                            메뉴이름
+                            의뢰인일때 = "받은 견적서"
+                            변호사일때 = "보낸 견적서"
+                         -->
+        
+                        <a href="cs.html" class="nav_a">고객센터</a>
+                    </nav>
+    
+                    <div class="h_right vt_mid go_myp_law">
+                        <div class="h_profile vt_mid">
+                            <div class="circle">
+                                <div class="grid">
+                                    <img src="../img/l_profile.png" alt="프로필">
+                                </div>
+                            </div>
+                        </div>
+                        <span class="myname vt_mid">
+                            김철수 변호사님
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="head_m">
+            <div class="mh_left vt_mid">
+                <button type="button" class="back_btn" onclick="history.go(-1);">
+                    <img src="../img/back_btn.png" alt="뒤로가기">
+                </button>
+            </div>
+            <h1 class="mh_cen vt_mid">
+                <span class="padding">1:1 질문하기</span>
+            </h1>
+            <div class="mh_right vt_mid">
+                <button type="button" class="alarm">
+                    <img src="../img/alarm_btn.png" alt="알림">
+
+                    <span class="num vt_mid">99</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 팝업2 -->
+    <div class="pop pop2">
+
+        <div class="black_bg"></div>
+    
+    
+    
+        <div class="p_con">
+    
+            <div class="title_area">
+    
+                <h2 class="p_h2 vt_mid"></h2>
+    
+                <button type="button" class="close_btn vt_mid">
+    
+                    <img src="../img/close_btn.png" alt="닫기">
+    
+                </button>
+    
+            </div>
+    
+            <div class="con_area">
+    
+                <div class="grid">
+    
+                    <div class="text"></div>
+    
+                </div>
+    
+            </div>
+    
+            <div class="pbtn_area">
+    
+                <button type="button" class="pbtns btn1">확인</button>
+    
+                <button type="button" class="pbtns btn2">취소</button>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+
+    <!-- 팝업1 -->
+    <div class="pop pop1">
+
+        <div class="black_bg"></div>
+    
+    
+    
+        <div class="p_con">
+    
+            <div class="title_area">
+    
+                <h2 class="p_h2 vt_mid"></h2>
+    
+                <button type="button" class="close_btn vt_mid">
+    
+                    <img src="../img/close_btn.png" alt="닫기">
+    
+                </button>
+    
+            </div>
+    
+            <div class="con_area">
+    
+                <div class="grid">
+    
+                    <div class="text"></div>
+    
+                </div>
+    
+            </div>
+    
+            <div class="pbtn_area">
+    
+                <button type="button" class="pbtn">확인</button>
+    
+            </div>
+    
+        </div>
+    
+    </div>
+
+    <section id="inq" class="page">
+
+        <div class="inner1120">
+    
+    
+    
+            <h2 class="h2">
+    
+                <div class="h2_left vt_mid">1:1 질문하기</div>
+    
+            </h2>
+    
+    
+    
+            <div class="contents">
+    
+                <div class="inner940">
+    
+                    <form name="inquiry">
+    
+                        <div class="mb40 input_text on">
+    
+                            <label for="user_email" class="r_lab mb20">이메일 주소</label>
+    
+                            <input type="email" name="user_email" id="user_email" class="input" placeholder="이메일을 입력해주세요.">
+    
+                        </div>
+    
+                        <div class="mb40 input_text">
+    
+                            <label for="title" class="r_lab mb20">
+    
+                                <span class="vt_mid">제목</span>
+    
+                                <div class="sc_area vt_mid">
+    
+                                    <input type="checkbox" name="secret" id="secret" class="ckbox">
+    
+                                    <label for="secret" class="s_lab">비공개 질문으로 등록하기</label>
+    
+                                </div>
+    
+                            </label>
+    
+                            <input type="email" name="title" id="title" class="input" placeholder="질문 제목을 입력해주세요.">
+    
+                        </div>
+    
+                        <div class="input_text">
+    
+                            <div class="mb40">
+    
+                                <label for="text" class="r_lab mb20">문의 내용</label>
+    
+                                <textarea class="textarea" name="text" id="text" placeholder="문의 내용을 입력해주세요."></textarea>
+    
+                            </div>
+    
+                            <div class="mb40">
+    
+                                <label class="r_lab mb20"><span class="bold">첨부파일 </span>(선택 사항)</label>
+    
+                                <div class="f_area">
+    
+                                    <div class="f_box">
+    
+                                        <div class="grid">
+    
+                                            <img src="../img/file1.png" alt="file">
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="f_box">
+    
+                                        <div class="grid">
+    
+                                            <img src="../img/file2.png" alt="file">
+    
+                                        </div>
+    
+                                    </div>
+    
+                                    <div class="f_box">
+    
+                                        <input type="file" name="customFile" id="customFile" class="file">
+    
+                                        <label for="customFile" class="file_label">
+    
+                                            <div class="grid">
+    
+                                                <img src="../img/file_plus.png" alt="icon" class="icon">
+    
+                                            </div>
+    
+                                        </label>
+    
+                                    </div>
+    
+                                </div>
+    
+                            </div>
+    
+    
+    
+                            <div class="btns_area">
+    
+                                <button type="button" class="btns btn2">제출</button>
+    
+                            </div>
+    
+                        </div>
+    
+                    </form>
+    
+                </div>
+    
+            </div>
+    
+    
+    
+        </div>
+    
+    </section>
+    
+    
+    
+    <script>
+    
+        $('#inq .btn2').click(function(){
+    
+            $('.pop2').addClass('on');
+    
+            $('.pop2 .p_h2').text("1:1 질문 등록");
+    
+            $('.pop2 .text').text("질문을 등록 하시겠습니까?");
+    
+        });
+    
+    
+    
+        $('.pop2 .pbtns.btn1').click(function(){
+    
+            location.href='cs.html';
+    
+        });
+    
+    </script>
+
+
+    <footer class="pc_footer"> <!--is_join일때 addclass mb0-->
+        <div class="inner1120">
+            <div class="f_div">
+                <a href="introduce.html" class="f_a">회사소개</a>
+                <a href="join_term1.html" class="f_a">이용약관</a>
+                <a href="join_term2.html" class="f_a">개인정보처리방침</a>
+            </div>
+
+            <div class="f_padding">
+                <div class="addr">사업자주소가 들어갑니다</div>
+                <div class="f_info">
+                    <div class="mr20 vt_mid">대표자명 : 신동우</div>
+                    <div class="mr20 vt_mid">고객센터 010-4684-3472</div>
+                    <div class="mr20 vt_mid">이메일 : lawpaper@gmail.com</div>
+                </div>
+
+                <div class="b_num">사업자등록번호: 123-12-12312</div>
+                <div class="f_con">
+                    하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 
+                </div>
+
+                <div class="lc_area">
+                    <div class="f_logo vt_mid">
+                        <img src="../img/logo.png" alt="LawPaper">
+                    </div>
+                    <div class="copy vt_mid">Copyright ⓒ2023 lawpaper. All rights reserved</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <footer class="m_footer">
+        <a href="index.html" class="f_a vt_mid">
+            <img src="../img/nav1.png" alt="홈">
+            <div class="f_txt">홈</div>
+        </a>
+        <a href="#" class="f_a vt_mid go_doc">
+            <img src="../img/nav2.png" alt="서면작성 의뢰">
+            <div class="f_txt">서면작성 의뢰</div>
+        </a>
+        <a href="#" class="f_a vt_mid go_chat">
+            <span class="rel">
+                <img src="../img/nav3.png" alt="받은 견적서">
+
+                <span class="number">99</span>
+            </span>
+            <div class="f_txt">받은 견적서</div>
+            <!-- 
+                메뉴이름
+                의뢰인일때 = "받은 견적서"
+                변호사일때 = "보낸 견적서"
+             -->
+        </a>
+        <a href="myp_law.html" class="f_a vt_mid">
+            <img src="../img/nav4.png" alt="마이페이지">
+            <div class="f_txt">마이페이지</div>
+
+            <!--
+                비로그인 상태일땐 로그인팝업 (pop_logpop.html 나옴)
+            -->
+        </a>
+        <a href="cs.html" class="f_a vt_mid">
+            <img src="../img/nav5.png" alt="고객센터">
+            <div class="f_txt">고객센터</div>
+        </a>
+    </footer>
+
+</body>
+
+</html>
