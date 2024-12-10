@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - SHIN HYERIM</title>
 
-    <link rel="icon" href="../img/favicon.ico">
-    <link rel="shortcut icon" href="../img/favicon.ico">
+    <!-- <link rel="icon" href="../img/favicon.ico">
+    <link rel="shortcut icon" href="../img/favicon.ico"> -->
 
     <meta content="LawPaper" property='og:title' />
     <meta content="" property='og:url' />
@@ -26,6 +26,13 @@
 </head>
 <body>
 
+    <style>
+        @media (max-width: 960px) {
+            .header {display: none;}
+            .pc_footer {display: none;}
+        }
+    </style>
+
     
     <header class="header"> <!--헤더 없을때 addclass none-->
         <div class="nav_bg"></div>
@@ -43,8 +50,8 @@
                     </h1>
                     <nav class="h_cen vt_mid">
                         <a href="index.html" class="nav_a">홈</a>
-                        <a href="#" class="nav_a head2">서면작성 의뢰</a>
-                        <a href="chat.html" class="nav_a new">받은 견적서</a>
+                        <a href="index.html" class="nav_a head2">서면작성 의뢰</a>
+                        <a href="chat.html" class="nav_a new">보낸 견적서</a>
                         <!-- 
                             메뉴이름
                             의뢰인일때 = "받은 견적서"
@@ -185,47 +192,27 @@
     
                         <div class="chat_list">
     
-    <!--
-    
-        05/24 수정사항
-    
-        -채팅창 들어가서도 안읽은 메시지가 있을 경우 빨간점을 표기해주세요.
-    
-    
-    
-        => chat_a에 addClass('new')
-    
-    -->
-    
-    
-    
-    <!--
-    
-        <의뢰인일때 채팅창 하단메뉴>
-    
-            파일첨부 / 거래확정 및 리뷰 작성
-    
-    
-    
-        <변호사일때 채팅창 하단메뉴>
-    
-            파일첨부 / 결제창 생성하기 / 거래확정 요청하기
-    
-    -->
-    
-    
-    
-    
-    
-    <!--
-    
-        파일첨부 확장자별 아이콘
-    
-        www / img / file_icon 폴더
-    
-        확장자명 알수없을때 = file_none.png
-    
-    -->
+<!--
+    05/24 수정사항
+    -채팅창 들어가서도 안읽은 메시지가 있을 경우 빨간점을 표기해주세요.
+
+    => chat_a에 addClass('new')
+-->
+
+<!--
+    <의뢰인일때 채팅창 하단메뉴>
+        파일첨부 / 거래확정 및 리뷰 작성
+
+    <변호사일때 채팅창 하단메뉴>
+        파일첨부 / 결제창 생성하기 / 거래확정 요청하기
+-->
+
+
+<!--
+    파일첨부 확장자별 아이콘
+    www / img / file_icon 폴더
+    확장자명 알수없을때 = file_none.png
+-->
     
     
     
@@ -379,14 +366,9 @@
     
     
     
-                    <!--채팅에 있는 이름을 통해 변호사 상세페이지에 들어갈경우 "상담신청서 작성하기" 버튼을 없애주세요-->
-    
-    
-    
                     <div class="chat_right vt_top">
     
     
-    
                         <div class="tab on">
     
                             <div class="cr_top">
@@ -395,9 +377,9 @@
     
                                     <button type="button" class="back_btn" onclick="history.go(-1);"><img src="../img/back_btn.png" alt="뒤로가기"></button>    
     
-                                    
+     
     
-                                    <a href="lawyer_view_nobtn.html" class="go_detail"> <!--채팅에 있는 이름을 통해 변호사 상세페이지에 들어갈경우 "상담신청서 작성하기" 버튼을 없애주세요-->
+                                    <a href="laywer_view.html" class="go_detail">
     
                                         <div class="profile vt_mid">
     
@@ -771,7 +753,7 @@
     
                                                 <div class="btn_area">
     
-                                                    <button type="button" class="cr_btn" onclick="location.href='lawyer_view.html'">리뷰 확인하기</button>
+                                                    <button type="button" class="cr_btn" onclick="location.href='laywer_view.html'">리뷰 확인하기</button>
     
                                                 </div>
     
@@ -865,7 +847,7 @@
     
     
     
-                        <div class="tab on">
+                        <div class="tab">
     
                             <div class="cr_top">
     
@@ -875,7 +857,7 @@
     
                                     
     
-                                    <a href="lawyer_view_nobtn.html" class="go_detail"> <!--채팅에 있는 이름을 통해 변호사 상세페이지에 들어갈경우 "상담신청서 작성하기" 버튼을 없애주세요-->
+                                    <a href="lawyer_view.html" class="go_detail"> <!--채팅에 있는 이름을 통해 변호사 상세페이지에 들어갈경우 "상담신청서 작성하기" 버튼을 없애주세요-->
     
                                         <div class="profile vt_mid">
     
@@ -1249,7 +1231,7 @@
     
                                                 <div class="btn_area">
     
-                                                    <button type="button" class="cr_btn" onclick="location.href='lawyer_view.html'">리뷰 확인하기</button>
+                                                    <button type="button" class="cr_btn" onclick="location.href='laywer_view.html'">리뷰 확인하기</button>
     
                                                 </div>
     
@@ -1343,7 +1325,7 @@
     
     
     
-                        <div class="tab on">
+                        <div class="tab">
     
                             <div class="cr_top">
     
@@ -1353,7 +1335,7 @@
     
                                     
     
-                                    <a href="lawyer_view_nobtn.html" class="go_detail"> <!--채팅에 있는 이름을 통해 변호사 상세페이지에 들어갈경우 "상담신청서 작성하기" 버튼을 없애주세요-->
+                                    <a href="lawyer_view.html" class="go_detail"> <!--채팅에 있는 이름을 통해 변호사 상세페이지에 들어갈경우 "상담신청서 작성하기" 버튼을 없애주세요-->
     
                                         <div class="profile vt_mid">
     
@@ -1727,7 +1709,7 @@
     
                                                 <div class="btn_area">
     
-                                                    <button type="button" class="cr_btn" onclick="location.href='lawyer_view.html'">리뷰 확인하기</button>
+                                                    <button type="button" class="cr_btn" onclick="location.href='laywer_view.html'">리뷰 확인하기</button>
     
                                                 </div>
     
@@ -1821,7 +1803,7 @@
     
     
     
-                        <div class="tab on">
+                        <div class="tab">
     
                             <div class="cr_top">
     
@@ -1831,7 +1813,7 @@
     
                                     
     
-                                    <a href="lawyer_view_nobtn.html" class="go_detail"> <!--채팅에 있는 이름을 통해 변호사 상세페이지에 들어갈경우 "상담신청서 작성하기" 버튼을 없애주세요-->
+                                    <a href="lawyer_view.html" class="go_detail"> <!--채팅에 있는 이름을 통해 변호사 상세페이지에 들어갈경우 "상담신청서 작성하기" 버튼을 없애주세요-->
     
                                         <div class="profile vt_mid">
     
@@ -2205,7 +2187,7 @@
     
                                                 <div class="btn_area">
     
-                                                    <button type="button" class="cr_btn" onclick="location.href='lawyer_view.html'">리뷰 확인하기</button>
+                                                    <button type="button" class="cr_btn" onclick="location.href='laywer_view.html'">리뷰 확인하기</button>
     
                                                 </div>
     
@@ -2310,91 +2292,48 @@
     
     
     <script>
-    
         $('.ct_out_btn').click(function(){
-    
             $('.pop2').addClass('on');
-    
             $('.pop2 .p_h2').text('채팅방 나가기');
-    
             $('.pop2 .text').text('채팅방을 나가시겠습니까?');
-    
         });
-    
-    
     
         $('#chat .pay_btn').click(function(){
-    
             $('.pop2').addClass('on');
-    
             $('.pop2 .p_h2').text('결제창 생성하기');
-    
             $('.pop2 .text').text('결제창을 생성하시겠습니까?');
-    
         });
-    
-    
     
         $('.pop2 .pbtns.btn1').click(function(){
-    
             var winW = $(window).innerWidth();
     
-    
-    
             if($('.pop2 .p_h2').text() == "결제창 생성하기"){
-    
                 $('.pop2').removeClass('on');
-    
             }else{
-    
                 if(winW > 960){
-    
                     location.href='chat.html';
-    
                 }else{
-    
                     location.href='chat_mob_list.html';
-    
                 }
-    
             }
-    
         });
-    
-    
-    
     
     
         $('.chat_box').each(function(data){
-    
             var ctHeight = $(this).innerHeight();
     
-    
-    
             if(ctHeight > 110) {
-    
                 $(this).parent().addClass('big');
-    
             }
-    
         });
     
     
-    
-    
-    
         $('.chat_a').click(function(){
-    
             if($(this).hasClass('myp') == false){
-    
                 $('.chat_right .tab').removeClass('on');
-    
                 $('.chat_right .tab').eq($(this).index()).addClass('on');
-    
             }
-    
         })
-    
     </script>
 
 
@@ -2434,7 +2373,7 @@
             <img src="../img/nav1.png" alt="홈">
             <div class="f_txt">홈</div>
         </a>
-        <a href="#" class="f_a vt_mid go_doc">
+        <a href="index.html" class="f_a vt_mid go_doc">
             <img src="../img/nav2.png" alt="서면작성 의뢰">
             <div class="f_txt">서면작성 의뢰</div>
         </a>
@@ -2444,7 +2383,7 @@
 
                 <span class="number">99</span>
             </span>
-            <div class="f_txt">받은 견적서</div>
+            <div class="f_txt">보낸 견적서</div>
             <!-- 
                 메뉴이름
                 의뢰인일때 = "받은 견적서"

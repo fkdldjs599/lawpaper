@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - SHIN HYERIM</title>
 
-    <link rel="icon" href="../img/favicon.ico">
-    <link rel="shortcut icon" href="../img/favicon.ico">
+    <!-- <link rel="icon" href="../img/favicon.ico">
+    <link rel="shortcut icon" href="../img/favicon.ico"> -->
 
     <meta content="LawPaper" property='og:title' />
     <meta content="" property='og:url' />
@@ -42,8 +42,8 @@
                     </h1>
                     <nav class="h_cen vt_mid">
                         <a href="index.html" class="nav_a">홈</a>
-                        <a href="#" class="nav_a head2">서면작성 의뢰</a>
-                        <a href="chat.html" class="nav_a new">받은 견적서</a>
+                        <a href="index.html" class="nav_a head2">서면작성 의뢰</a>
+                        <a href="chat.html" class="nav_a new">보낸 견적서</a>
                         <!-- 
                             메뉴이름
                             의뢰인일때 = "받은 견적서"
@@ -80,7 +80,39 @@
                 </button>
             </div>
         </div>
-    </header>
+    </header>\
+
+    <!-- 로그인팝업 -->
+    <div class="pop logpop">
+        <div class="black_bg"></div>
+    
+        <div class="p_con">
+            <div class="close_area">
+                <button type="button" class="close_btn vt_mid">
+                    <img src="../img/close_btn_bk.png" alt="닫기">
+                </button>
+            </div>
+            <div class="logo_area">
+                <img src="../img/logo.png" alt="로고">
+            </div>
+            <div class="lp_t1">
+                로페이퍼는 법률서면 작성을<br>
+                대행하는 플랫폼입니다.
+            </div>
+            
+            <i class="bar"></i>
+    
+            <div class="lp_t2">
+                로그인 후 서비스를 이용해보세요.
+            </div>
+    
+            <div class="button_area">
+                <button type="button" class="log_btn btn1" onclick="location.href='https://accounts.kakao.com/login/?continue=https%3A%2F%2Fkauth.kakao.com%2Foauth%2Fauthorize%3Fresponse_type%3Dcode%26redirect_uri%3Dhttp%253A%252F%252Flawpaper.co.kr%252Fsns%252Fkakao_outh.php%26m_type%3DR%26client_id%3D70e6b1bd653e179a706a08bf493afd4e%26through_account%3Dtrue&talk_login=hidden#login'">의뢰인입니다.</button>
+                <br>
+                <button type="button" class="log_btn btn2" onclick="location.href='https://accounts.kakao.com/login/?continue=https%3A%2F%2Fkauth.kakao.com%2Foauth%2Fauthorize%3Fresponse_type%3Dcode%26redirect_uri%3Dhttp%253A%252F%252Flawpaper.co.kr%252Fsns%252Fkakao_outh_lawer.php%26m_type%3DR%26client_id%3D9d8a23d624d941328ad7a1f16aafc70a%26through_account%3Dtrue&talk_login=hidden#login'">변호사입니다.</button>
+            </div>
+        </div>
+    </div>
 
     <section id="main" class="page">
         <div class="inner1120">
@@ -371,6 +403,73 @@
         </div>
     </section>
 
+    <footer class="pc_footer"> <!--is_join일때 addclass mb0-->
+        <div class="inner1120">
+            <div class="f_div">
+                <a href="introduce.html" class="f_a">회사소개</a>
+                <a href="join_term1.html" class="f_a">이용약관</a>
+                <a href="join_term2.html" class="f_a">개인정보처리방침</a>
+            </div>
+
+            <div class="f_padding">
+                <div class="addr">사업자주소가 들어갑니다</div>
+                <div class="f_info">
+                    <div class="mr20 vt_mid">대표자명 : 신동우</div>
+                    <div class="mr20 vt_mid">고객센터 010-4684-3472</div>
+                    <div class="mr20 vt_mid">이메일 : lawpaper@gmail.com</div>
+                </div>
+
+                <div class="b_num">사업자등록번호: 123-12-12312</div>
+                <div class="f_con">
+                    하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 
+                </div>
+
+                <div class="lc_area">
+                    <div class="f_logo vt_mid">
+                        <img src="../img/logo.png" alt="LawPaper">
+                    </div>
+                    <div class="copy vt_mid">Copyright ⓒ2023 lawpaper. All rights reserved</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <footer class="m_footer">
+        <a href="index.html" class="f_a vt_mid">
+            <img src="../img/nav1.png" alt="홈">
+            <div class="f_txt">홈</div>
+        </a>
+        <a href="index.html" class="f_a vt_mid go_doc">
+            <img src="../img/nav2.png" alt="서면작성 의뢰">
+            <div class="f_txt">서면작성 의뢰</div>
+        </a>
+        <a href="#" class="f_a vt_mid go_chat">
+            <span class="rel">
+                <img src="../img/nav3.png" alt="받은 견적서">
+
+                <span class="number">99</span>
+            </span>
+            <div class="f_txt">보낸 견적서</div>
+            <!-- 
+                메뉴이름
+                의뢰인일때 = "받은 견적서"
+                변호사일때 = "보낸 견적서"
+             -->
+        </a>
+        <a href="myp_law.html" class="f_a vt_mid">
+            <img src="../img/nav4.png" alt="마이페이지">
+            <div class="f_txt">마이페이지</div>
+
+            <!--
+                비로그인 상태일땐 로그인팝업 (pop_logpop.html 나옴)
+            -->
+        </a>
+        <a href="cs.html" class="f_a vt_mid">
+            <img src="../img/nav5.png" alt="고객센터">
+            <div class="f_txt">고객센터</div>
+        </a>
+    </footer>
+
     <script>
 
         $('.stop_btn .stop').show();
@@ -419,76 +518,17 @@
         
             return false;
         });
+
+        $('.head_con .head2, .m_footer .go_doc').click(function(){
+            var menu2_top = $('#main .doc_wrap').offset().top - 100;
+
+            $('html, body').animate({scrollTop: menu2_top}, 500);
+
+            return false;
+        });
     
     
     </script>
-
-    <footer class="pc_footer"> <!--is_join일때 addclass mb0-->
-        <div class="inner1120">
-            <div class="f_div">
-                <a href="introduce.html" class="f_a">회사소개</a>
-                <a href="join_term1.html" class="f_a">이용약관</a>
-                <a href="join_term2.html" class="f_a">개인정보처리방침</a>
-            </div>
-
-            <div class="f_padding">
-                <div class="addr">사업자주소가 들어갑니다</div>
-                <div class="f_info">
-                    <div class="mr20 vt_mid">대표자명 : 신동우</div>
-                    <div class="mr20 vt_mid">고객센터 010-4684-3472</div>
-                    <div class="mr20 vt_mid">이메일 : lawpaper@gmail.com</div>
-                </div>
-
-                <div class="b_num">사업자등록번호: 123-12-12312</div>
-                <div class="f_con">
-                    하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 하단 푸터 내용이 들어갑니다. 
-                </div>
-
-                <div class="lc_area">
-                    <div class="f_logo vt_mid">
-                        <img src="../img/logo.png" alt="LawPaper">
-                    </div>
-                    <div class="copy vt_mid">Copyright ⓒ2023 lawpaper. All rights reserved</div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <footer class="m_footer">
-        <a href="index.html" class="f_a vt_mid">
-            <img src="../img/nav1.png" alt="홈">
-            <div class="f_txt">홈</div>
-        </a>
-        <a href="#" class="f_a vt_mid go_doc">
-            <img src="../img/nav2.png" alt="서면작성 의뢰">
-            <div class="f_txt">서면작성 의뢰</div>
-        </a>
-        <a href="#" class="f_a vt_mid go_chat">
-            <span class="rel">
-                <img src="../img/nav3.png" alt="받은 견적서">
-
-                <span class="number">99</span>
-            </span>
-            <div class="f_txt">받은 견적서</div>
-            <!-- 
-                메뉴이름
-                의뢰인일때 = "받은 견적서"
-                변호사일때 = "보낸 견적서"
-             -->
-        </a>
-        <a href="myp_law.html" class="f_a vt_mid">
-            <img src="../img/nav4.png" alt="마이페이지">
-            <div class="f_txt">마이페이지</div>
-
-            <!--
-                비로그인 상태일땐 로그인팝업 (pop_logpop.html 나옴)
-            -->
-        </a>
-        <a href="cs.html" class="f_a vt_mid">
-            <img src="../img/nav5.png" alt="고객센터">
-            <div class="f_txt">고객센터</div>
-        </a>
-    </footer>
 
 </body>
 

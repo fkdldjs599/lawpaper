@@ -148,36 +148,6 @@ $(document).ready(function(){
 
 
 
-    
-
-    $('.head_con .head2').click(function(){
-
-        var this_url = window.location.href;
-
-
-
-        if(this_url == 'http://lawpaper.webadsky.net/org/index.html' || this_url == 'http://lawpaper.webadsky.net/org/index.html#'){
-
-
-
-            var menu2_top = $('#main .doc_wrap').offset().top - 100;
-
-
-
-            $('html, body').animate({scrollTop: menu2_top}, 500);
-
-            return false;
-
-        }else{
-
-            location.href='index.html';
-
-        }
-
-    });
-
-
-
     $('.pagination .p_num').click(function(){
 
         $('.pagination .p_num').removeClass('on');
@@ -354,6 +324,11 @@ $(document).ready(function(){
 
     });
 
+
+    $('.rv_block .more_btn').click(function(){
+        $(this).parent().removeClass('on');
+        $(this).parent().prev('.rv_text').removeClass('ellip')
+    });
 
 
 });
